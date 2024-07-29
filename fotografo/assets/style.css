@@ -1,0 +1,500 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --maxWidthContent: 1180px;
+    --primaryColor: #303030;
+    --secundaryColor: #e2b148;
+    --brightColor: #fff;
+    --darkColor: #000;
+    --linkColor: #fff29a;
+    --linkHoverColor: #cccabd;
+}
+
+body {
+    color: var(--brightColor);
+    background-color: var(--darkColor);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-bottom: 0.3rem;
+    color: var(--secundaryColor);
+    border-bottom: 1px solid var(--secundaryColor);
+}
+
+form button {
+    color: var(--primaryColor);
+    background-color: var(--linkColor);
+    cursor: pointer;
+}
+
+form button:hover {
+    color: var(--brightColor);
+    background-color: var(--primaryColor);
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--brightColor);
+    background-color: var(--primaryColor);
+    box-shadow: 0px 10px 30px var(--darkColor); 
+    -webkit-box-shadow: 0px 10px 30px var(--darkColor);
+    -moz-box-shadow: 0px 10px 30px var(--darkColor);
+    z-index: 1;
+}
+
+nav {
+    width: 100%;
+    max-width: var(--maxWidthContent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#logo {
+    width: 30%;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#menu__header {
+    width: 70%;
+}
+
+#menu__header ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#menu__header a {
+    margin-left: 0.3rem;
+    padding: 1rem 1.5rem;
+    color: var(--brightColor);
+}
+
+#menu__header a:hover {
+    color: var(--brightColor);
+    background-color: var(--darkColor);
+    border-radius: 10px;
+}
+
+#menu__mobile {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem 1rem 1rem;
+    background-color: var(--primaryColor);
+}
+
+#menu__mobile li {
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--brightColor);
+}
+
+#menu__mobile li:last-child {
+    border-bottom: 0;
+}
+
+#menu__mobile a {
+    display: block;
+    color: var(--brightColor);
+    font-size: 1.4rem;
+}
+
+#show__menu {
+    display: none;
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#hide__menu {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+section {
+    padding-top: 5rem;
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--brightColor);
+    background-image: url("../assets/images/bg_home.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#home h2 {
+    margin-bottom: 1rem;
+    border: 0;
+}
+
+.center {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 7rem 1rem;
+    background-image: radial-gradient(var(--primaryColor)30%, var(--darkColor)60%, var(--primaryColor)10%, var(--darkColor) 65%, var(--primaryColor)20%, var(--darkColor));
+    text-align: center;
+    border: 15px inset var(--darkColor);
+    border-radius: 50%;
+    box-shadow: 10px -10px 30px var(--darkColor); 
+    -webkit-box-shadow: 10px -10px 30px var(--darkColor);
+    -moz-box-shadow: 10px -10px 30px var(--darkColor);
+}
+
+.center h2 {
+    color: var(--secundaryColor);
+    font-size: 2.4rem;
+    padding: 1rem;
+    text-shadow: var(--darkColor) 0.1em 0.4em 0.2em;
+}
+
+.content {
+    width: 100%;
+    max-width: var(--maxWidthContent);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.left, .right {
+    width: 48%;
+}
+
+.card {
+    width: 30%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--secundaryColor);
+    border-radius: 10px;
+}
+
+.card figcaption {
+    padding-bottom: 1rem;
+}
+
+.card img {
+    width: 100%;
+    opacity: 0.6;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card img:hover {
+    opacity: 1;
+}
+
+#about .left {
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+#about .right {
+    width: 50%;
+}
+
+#about span {
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+#about p {
+    margin: 1rem 0;
+}
+
+#about svg {
+    width: 40px;
+    height: 40px;
+    margin: 0 1rem 0 0;
+}
+
+#about img {
+    width: 100%;
+}
+
+.photo__mobile {
+    width: 100%;
+    display: none;
+}
+
+.social__media {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.left h4 {
+    margin: 0 0 1rem;
+}
+
+#portfolio h2 {
+    margin-bottom: 2rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--secundaryColor);
+}
+
+#contact .right img {
+    width: 100%;
+    opacity: 0.6;
+}
+
+#contact .right img:hover {
+    opacity: 1;
+}
+
+.social__media img {
+    margin-right: 1rem;
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1rem 0;
+    color: var(--brightColor);
+    background-color: var(--primaryColor);
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--secundaryColor);
+}
+
+footer a:hover {
+    color: var(--linkHoverColor);
+}
+
+form {
+    width: 320px;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 1rem;
+    padding: 1rem;
+    background-color: var(--secundaryColor);
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+}
+
+form fieldset {
+    padding: 1rem;
+    border: 1px solid var(--brightColor);
+    border-radius: 10px;
+}
+
+form legend {
+    padding: 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form input {
+    width: 100%;
+    margin: 0.5rem 0 1.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+form input::placeholder {
+    color: var(--primaryColor);
+    font-size: 1rem;
+}
+
+form textarea {
+    width: 100%;
+    height: 7rem;
+    margin: 0.5rem 0 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    resize: none;
+}
+
+form textarea::placeholder {
+    color: var(--primaryColor);
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+form button {
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+#close {
+    float: right;
+}
+
+#email__camera {
+    position: fixed;
+    top: 6rem;
+    right: 3rem;
+    cursor: pointer;
+}
+
+#email__camera:hover {
+    width: 55px;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .3);
+}
+
+dialog {
+    width: 75%;
+    top: 5%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+    z-index: 4;
+}
+
+dialog img {
+    width: 100%;
+    border: 5px solid var(--secundaryColor);
+}
+
+.button__close__modal {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    color: var(--secundaryColor);
+    background-color: var(--brightColor);
+    border: 0;
+    cursor: pointer;
+}
+
+@media(max-width:720px){
+
+    header {
+        height: 60px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    #logo {
+        width: 50%;
+    }
+
+    #menu__header {
+        display: none;
+    }
+
+    #show__menu {
+        display: block;
+    }
+
+    #hide__menu {
+        display: block;
+    }
+
+    section {
+        padding-top: 4rem;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    
+    .left {
+        margin-bottom: 1rem;
+    }
+    
+    .card {
+        width: 48%;
+    }
+       
+    .photo__mobile {
+        display: block;
+    }
+
+    #about .left {
+        width: 100%;
+    }
+
+    #about .right {
+        display: none;
+    }
+
+    #email__camera {
+        right: 1rem;
+    }
+
+    dialog {
+        width: 90%;
+    }
+	
+	.social__media {
+		width: 50%;
+	}
+	
+	.social__media .social__link {
+		display: none;
+	}
+}
+
+@media(max-width:540px){
+
+    .card {
+        width: 100%;
+    }
+}
+
+
